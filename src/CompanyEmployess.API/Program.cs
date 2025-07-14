@@ -1,9 +1,15 @@
 using CompanyEmployess.API.Extensions;
+using NLog;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
+LogManager.Setup().LoadConfigurationFromFile("nlog.config").GetCurrentClassLogger();
+
 // Add services to the container.
 builder.Services.ConfigureCors();
+builder.Services.ConfigureLoggerService();
 
 builder.Services.AddControllers();
 

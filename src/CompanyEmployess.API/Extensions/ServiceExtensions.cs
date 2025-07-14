@@ -1,4 +1,7 @@
-﻿namespace CompanyEmployess.API.Extensions
+﻿using CompanyEmployess.Contracts;
+using CompanyEmployess.LoggerService;
+
+namespace CompanyEmployess.API.Extensions
 {
     public static class ServiceExtensions
     {
@@ -9,5 +12,9 @@
              .AllowAnyMethod()
              .AllowAnyHeader());
         });
+
+        public static void ConfigureLoggerService(this IServiceCollection services) => services.AddSingleton<ILoggerManager, LoggerManager>();
+
+
     }
 }
