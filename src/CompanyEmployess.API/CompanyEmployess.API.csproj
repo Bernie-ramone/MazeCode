@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CompanyEmployess.LoggerService\CompanyEmployess.LoggerService.csproj" />
     <ProjectReference Include="..\CompanyEmployess.Repository\CompanyEmployess.Repository.csproj" />
+    <ProjectReference Include="..\CompanyEmployess.Service\CompanyEmployess.Service.csproj" />
   </ItemGroup>
 
 </Project>
